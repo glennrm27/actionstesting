@@ -1,0 +1,20 @@
+#This is where you would generally comment on the reason for this workflow
+name: First Workflow 
+on: 
+   push: 
+       branches: 
+       - main 
+   workflow_dispatch: 
+jobs: 
+  first_job:
+    name: jobone
+    runs-on: ubuntu-latest
+    steps: 
+        - name: Say Hello to User
+        -  run: |
+             echo "Hello User from ${{ github.actor }} ."
+             echo "The current branch is '${{ github.ref }}'."
+             shell: bash
+
+    
+          
